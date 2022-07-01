@@ -16,22 +16,16 @@ const NETWORKS = [
     network_id: "1",
   },
   {
-    name: "Testnet",
-    loopchain_endpoint: "https://bicon.net.solidwallet.io/api/v3",
-    chainalytic_endpoint: "https://yudus.dev/chainalytic-icon/api/testnet",
-    network_id: "3",
-  },
-  {
     name: "Sejong",
     loopchain_endpoint: "https://sejong.net.solidwallet.io/api/v3",
     chainalytic_endpoint: "https://yudus.dev/chainalytic-icon/api/testnet",
     network_id: "83",
   },
   {
-    name: "Local",
-    loopchain_endpoint: "http://localhost:9000/api/v3",
-    chainalytic_endpoint: "http://localhost:5600",
-    network_id: "0",
+    name: "Lisbon",
+    loopchain_endpoint: "https://lisbon.net.solidwallet.io/api/v3",
+    chainalytic_endpoint: "https://yudus.dev/chainalytic-icon/api/testnet",
+    network_id: "2",
   },
   {
     name: "Custom",
@@ -41,8 +35,7 @@ const NETWORKS = [
   },
 ];
 
-// const DEFAULT_CONTRACT = "cx69bcdf1753472c1444188ec3f5188657e30c8322"; // broof
-const DEFAULT_CONTRACT = "cxd47f7d943ad76a0403210501dab03d4daf1f6864"; // iconbet
+const DEFAULT_CONTRACT = "cx9c4698411c6d9a780f605685153431dcda04609f";
 
 const ContractHubContext = React.createContext();
 HeaderSection.contextType = ContractHubContext;

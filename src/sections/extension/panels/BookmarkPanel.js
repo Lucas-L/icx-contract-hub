@@ -16,13 +16,18 @@ export class BookmarkPanel extends React.Component {
 
   componentDidMount() {
     const bookmark = this.loadBookmark();
+    bookmark['cx9c4698411c6d9a780f605685153431dcda04609f'] = 'Escrow'
+    bookmark['cx7ecb16e4c143b95e01d05933c17cb986cfe618e6'] = 'Rewards'
+    bookmark['cx2d86ce51600803e187ce769129d1f6442bcefb5b'] = 'Staked'
+    bookmark['cx2e6d0fc0eca04965d06038c8406093337f085fcf'] = 'CFT'
+    bookmark['cx82c8c091b41413423579445032281bca5ac14fc0'] = 'Internal'
     this.setState({ bookmark: bookmark });
   }
 
   loadBookmark() {
     let bookmark = localStorage.getItem(BOOKMARK_KEY);
     bookmark = bookmark ? JSON.parse(bookmark) : {};
-
+    console.log(bookmark)
     return bookmark;
   }
 

@@ -155,7 +155,7 @@ export class IconApi {
     var txHash;
     console.log(params)
     Object.keys(params).forEach(key => {
-      if(params[key].charAt(0) === '[' && params[key].charAt(params[key].length - 1) === ']') params[key] = JSON.parse(params[key])
+      if(!Array.isArray(params[key]) && params[key].charAt(0) === '[' && params[key].charAt(params[key].length - 1) === ']') params[key] = JSON.parse(params[key])
     })
     console.log(params)
     if (this.authInfo.iconexWallet) {
