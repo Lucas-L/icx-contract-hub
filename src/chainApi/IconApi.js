@@ -153,7 +153,11 @@ export class IconApi {
     const provider = new HttpProvider(this.endpoint);
     const iconService = new IconService(provider);
     var txHash;
-
+    console.log(params)
+    Object.keys(params).forEach(key => {
+      if(params[key].charAt(0) === '[' && params[key].charAt(params[key].length - 1) === ']') params[key] = JSON.parse(params[key])
+    })
+    console.log(params)
     if (this.authInfo.iconexWallet) {
       const res = await this.__iconexCallTransaction(
         this.authInfo.iconexWallet,
